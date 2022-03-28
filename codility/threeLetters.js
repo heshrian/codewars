@@ -51,9 +51,17 @@ const solution = (A, B) => {
   return rt;
 };
 
-console.log(solution(3, 9));
+// console.log(solution(3, 9));
 
-// let A = 5;
-// let B = 3;
+let A = 5;
+let B = 3;
 // let C = A--;
 // console.log(C, A);
+
+console.log(A)
+A--
+console.log(A)
+A--
+console.log(A)
+A--
+console.log(A)

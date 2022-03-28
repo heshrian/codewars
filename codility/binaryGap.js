@@ -10,23 +10,38 @@
 
 const solution = (N) => {
   let binary = N.toString(2);
-  console.log(binary)
   let counter = 0;
   let max = 0;
   let numsArr = binary.split("");
-  console.log(numsArr);
   for (let i = 0; i < numsArr.length; i++) {
-    if (Number.parseInt(numsArr[i])===0) {
-        if (Number.parseInt(numsArr[i])===1){
-            console.log('1')
-        }
+    if (Number.parseInt(numsArr[i]) === 0) {
       counter++;
     }
+    if (Number.parseInt(numsArr[i]) === 1) {
+      if (max < counter) {
+        max = counter;
+      }
+        counter = 0;
+    }
   }
-  console.log(counter);
-  console.log(max);
-  console.log('asd')
+  console.log('a vege ' +max);
+  return max
 };
-// let a = 8;
-// console.log(a.toString(2).split(""));
+
 solution(1041);
+
+// let ar = ["1", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "0"];
+// let max = 0;
+// let counter = 0;
+// for (let i = 0; i < ar.length; i++) {
+//   if (Number.parseInt(ar[i]) === 0) {
+//     counter++;
+//   }
+//   if (Number.parseInt(ar[i]) === 1) {
+//     max = counter;
+//     counter === 0;
+//     console.log(max);
+//   }
+// }
+// console.log(counter);
+// console.log(max);
